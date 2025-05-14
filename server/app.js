@@ -5,8 +5,14 @@ const webServer = new ws.WebSocketServer({
 });
 
 webServer.on("connection", (socket) => {
-    console.log('Connection is running');
-    socket.on("message", () =>{
-        console.log(`Received message: ${message}`);
+    console.log('Connection established');
+    socket.on("message", (data) =>{
+        console.log(`Received message from client: ${data}`);
+        socket.send(`${data}`);
     })
 })
+
+
+webServer.on("close", () =>{
+    console.log('Connection closed');
+});
