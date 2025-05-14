@@ -11,9 +11,9 @@ function sendMessage() {
 }
 
 function addMessage(text) {
-      const messagesDiv = document.getElementById('messages');
-      const msg = document.createElement('div');
-      msg.textContent = text;
-      messagesDiv.appendChild(msg);
-      messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    const messagesDiv = document.getElementById('messages');
+    const msg = document.createElement('div');
+    msg.textContent = text;
+    messagesDiv.appendChild(msg);
+    messagesDiv.scrollTop = messagesDiv.scrollHeight;
 }
