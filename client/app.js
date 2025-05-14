@@ -1,27 +1,27 @@
-const socket = new WebSocket("ws://localhost:3001");
+const socket = io("ws://localhost:3001"); 
 
-socket.addEventListener('open', () => {
+socket.on('connect', () => {
     addMessage('✅ Connected to server');
 });
 
-socket.addEventListener('message', (event) => {
-    addMessage(`📨 Server: ${event.data}`);
+socket.on('message', (data) => {
+    addMessage(`📨 Server: ${data}`);
 });
 
-socket.addEventListener('close', () => {
+socket.on('disconnect', () => {
     addMessage('❌ Disconnected from server');
 });
 
-socket.addEventListener('error', (error) => {
-    console.error('WebSocket error:', error);
+socket.on('connect_error', (error) => {
+    console.error('Connection error:', error);
 });
 
 function sendMessage() {
     const input = document.getElementById('messageInput');
     const message = input.value.trim();
     if (message) {
-        socket.send(message);
-        addMessage(`🧑 You: ${message}`);
+        socket.emit('message', message); // Use a named event
+       // addMessage(`🧑 You: ${message}`);
         input.value = '';
     }
 }
@@ -33,3 +33,4 @@ function addMessage(text) {
     messagesDiv.appendChild(msg);
     messagesDiv.scrollTop = messagesDiv.scrollHeight;
 }
+
