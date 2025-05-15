@@ -15,7 +15,18 @@ const ChatWindow = ({username, roomId, socket}) => {
                 <p>Welcome, <span>{username}</span></p>
             </div>
             <div className={styles.chatMessages}>
+                {messages.map(message => {
+                    const {id, text, type, username} = message || {};
+                    
+                    if(type === "notif"){
+                        return <div key={id} className={styles.notif}>{text}</div>
+                    } else {
+                        return (
+                            <p>{username}</p>
+                        )
+                    }
 
+                })}
             </div>
         </div>
     );
