@@ -1,0 +1,53 @@
+.joinChatContainer {
+    background-color: #2f3136;
+    border-radius: 8px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #fff;
+}
+
+.heading {
+    margin-bottom: 20px;
+    color: #7289da;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input {
+    width: 300px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #202225;
+    border-radius: 4px;
+    background-color: #202225;
+    color: #fff;
+}
+
+.input::placeholder {
+    color: #b9bbbe;
+}
+
+.button {
+    width: 300px;
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #7289da;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #677bc4;
+}
