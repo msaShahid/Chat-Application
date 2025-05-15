@@ -34,7 +34,11 @@ function App() {
   return (
     <div>
       {isInRoom ?  
-        <ChatWindow/> : 
+        <ChatWindow 
+        username={username}
+        roomId={roomId}
+        socket={socket}
+        /> : 
         <JoinChatForm 
           onJoin={handleJoinRoom}
           setUsername={setUsername}
