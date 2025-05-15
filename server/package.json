@@ -4,7 +4,7 @@
   "description": "",
   "license": "ISC",
   "author": "",
-  "type": "commonjs",
+  "type": "module",
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js",
