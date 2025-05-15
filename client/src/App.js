@@ -28,11 +28,11 @@ function App() {
     socket.emit('user_join_room', { username, roomId });
 
     // toggling the user to go chat window page
-
+    setIsInRoom(true);
   }
 
   return (
-    <>
+    <div>
       {isInRoom ?  
         <ChatWindow/> : 
         <JoinChatForm 
@@ -44,7 +44,7 @@ function App() {
 
         />  
       }
-    </>
+    </div>
   );
 }
 
