@@ -2,7 +2,7 @@
 
 A responsive and user-friendly web Chat application with real-time update. 
 
-##  Tech Stack
+## Tech Stack
 
 - Frontend: React.js 
 - Backend: Node.js with Express
