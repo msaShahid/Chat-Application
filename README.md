@@ -1,18 +1,10 @@
-# Web Stock App
+# 🔌 Socket.IO Room Server
 
-A responsive and user-friendly web Chat application with real-time update. 
+This is a simple Node.js application using **Express** and **Socket.IO** that enables real-time communication. Users can connect to the server and join specific rooms using socket events.
 
-## Tech Stack
+## ✨ Features
 
-- Frontend: React.js 
-- Backend: Node.js with Express
-- Database: MongoDB / PostgreSQL 
-- Authentication: JWT (
-
-## Installation
-### Prerequisites
-- Node.js 
-- npm or yarn
-- API key from provider 
-
-
+- Real-time communication using WebSockets
+- Room-based architecture (users can join specific chat/game rooms)
+- Logs user connections and room join events
+- CORS-enabled for cross-origin communication
